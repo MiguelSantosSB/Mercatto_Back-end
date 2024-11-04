@@ -20,7 +20,6 @@ public class UserRestImpl implements UserRest {
     @Autowired
     UserService userService;
 
-
     @Override
     public ResponseEntity<String> signUp(Map<String, String> requestMap) {
         try {
@@ -30,6 +29,17 @@ public class UserRestImpl implements UserRest {
             ex.printStackTrace();
         }
         return MercattoUtils.getResponseEntity(MecattoController.SOMETHING_WENT_WRONG,HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @Override
+    public ResponseEntity<String> login(Map<String, String> requestMap) {
+        try{
+            return userService.login(requestMap);
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }
+        return MercattoUtils.getResponseEntity(MecattoController.SOMETHING_WENT_WRONG,HttpStatus.INTERNAL_SERVER_ERROR);
+
     }
 
 }
