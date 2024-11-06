@@ -20,7 +20,7 @@ public class CustomerUsersDetailsService implements UserDetailsService {
     @Autowired
     UserDao userDao;
 
-    private br.com.Mercatto.model.User userDetail;
+    private br.com.Mercatto.model.User  userDetail;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

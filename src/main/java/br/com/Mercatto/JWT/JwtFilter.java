@@ -57,7 +57,7 @@ public class JwtFilter extends OncePerRequestFilter {
             filterChain.doFilter(httpServletRequest, httpServletResponse);
         }
     }
-// Identifica se e amin ou user
+// Identifica se e admin ou user
 // em um futuro se for ter a role de vendedor possivel alteração aqui!!!
     public boolean isAdmin(){
         return "admin".equalsIgnoreCase((String) claims.get("role"));
@@ -70,5 +70,4 @@ public class JwtFilter extends OncePerRequestFilter {
     public String getCurrentUser(){
         return userName;
     }
-
 }
