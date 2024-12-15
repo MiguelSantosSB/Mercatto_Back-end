@@ -1,23 +1,20 @@
 package br.com.Mercatto.model;
 
 import jakarta.persistence.*;
-
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
-
-import java.io.Serializable;
 
 @Data
 @Entity
 @DynamicUpdate
 @DynamicInsert
 @Table(name = "user")
-public class User {
+public class UserModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(nullable = false, length = 100)
     private String name;

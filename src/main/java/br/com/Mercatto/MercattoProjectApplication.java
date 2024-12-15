@@ -1,5 +1,4 @@
 package br.com.Mercatto;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
